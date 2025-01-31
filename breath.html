@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Activity Suggestions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #f0f8ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+    }
+	header
+	{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+            background-color:#3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+			width:100%;
+			margin-bottom:50px;
+        }
+		.logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px; /* Adjust the height as needed */
+      margin-right: 10px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      height: 35px; /* Adjust the height as needed */
+    }
+	.element ul
+	{
+	list-style-type:none;
+	margin-left:-200px;
+	margin-top:-5px;
+	}
+	.element li
+	{
+		float:left;
+		padding:10px;
+		
+		
+	}
+	.element li a
+	{
+	text-decoration:none;
+	color:#fff;
+	transition:0.75s;
+	}
+	.element li a:hover
+	{
+	border-radius:8px;
+		border-bottom:5px solid blue;
+	}
+    h1 {
+      color: #333;
+      margin: 20px 0;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2 {
+      color: #007acc;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #555;
+    }
+    .arrow {
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid #007acc;
+      margin: 10px auto;
+      display: none;
+    }
+    .message-box {
+      background: #007acc;
+      color: white;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      width: 80%;
+      max-width: 600px;
+      display: none;
+      position: relative;
+    }
+    .btn {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+	  margin-bottom:150px;
+    }
+    .btn:hover {
+      background-color: #005f99;
+	  
+    }
+  </style>
+</head>
+<body>
+<header id="home">
+        
+    <div class="logo">
+      <img src="mh.jpg" alt="Logo">
+      <span><b>Mental Health Support</b></span>
+    </div>
+	<div class="element">
+	<ul>
+      <li><a href="home.html">Home</a></li>
+	  <li><a href="#">About</a></li>
+	  <li><a href="breath.html">Exercises</a></li>
+	  <li><a href="#">Contact Us</a></li>
+	  </ul>
+    </div>
+
+    <div class="profile">
+      <a href="profile.html"><img src="profile.jpg" alt="Profile Picture"></a>
+    </div>
+  
+    </header>
+  <h1>Choose Your Mental Health Goal</h1>
+  <div class="card-container">
+    <div class="card" onclick="suggestActivities('stress-relief')">
+      <h2>Stress Relief</h2>
+      <p>Feeling overwhelmed? Find simple and effective ways to unwind and reset.</p>
+    </div>
+    <div class="card" onclick="suggestActivities('relaxation')">
+      <h2>Relaxation</h2>
+      <p>Need to calm your mind? Try soothing exercises to help you feel at ease.</p>
+    </div>
+    <div class="card" onclick="suggestActivities('anxiety-management')">
+      <h2>Anxiety Management</h2>
+      <p>Feeling anxious? Engage in activities to regain control and peace.</p>
+    </div>
+  </div>
+
+  <div id="suggestions" style="margin-top: 30px; width: 100%; max-width: 800px;"></div>
+
+  <h2 style="margin-top: 40px;">Panic Attack Emergency Solution</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/8vkYJf8DOsc?si=cGDPz_HVMyhYEJo8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+  <div class="arrow" id="arrow"></div>
+  <div class="message-box" id="panic-message">
+    If you're experiencing a panic attack, try the 5-4-3-2-1 grounding technique:
+    <br> 5 things you see
+    <br> 4 things you can touch
+    <br> 3 things you hear
+    <br> 2 things you smell
+    <br> 1 thing you taste
+  </div>
+
+  <button class="btn" onclick="showPanicSolution()">Show Solution</button>
+
+  <script>
+    const suggestionsMap = {
+      'stress-relief': [
+        'Try 5-minute deep breathing exercises to reduce stress.',
+        'Go for a 15-minute walk outdoors.',
+        'Write down 3 things you are grateful for today.',
+      ],
+      'relaxation': [
+        'Listen to calming music for 10 minutes.',
+        'Light a scented candle and practice mindful breathing.',
+        'Visualize a peaceful place for 5 minutes.'
+      ],
+      'anxiety-management': [
+        'Use the 4-7-8 breathing technique (Inhale 4 seconds, Hold 7 seconds, Exhale 8 seconds).',
+        'Hold an ice cube in your hand to ground yourself.',
+        'Journal your anxious thoughts without judgment.'
+      ]
+    };
+
+    function suggestActivities(goal) {
+      const suggestionsDiv = document.getElementById('suggestions');
+      suggestionsDiv.innerHTML = '<h2>Recommended Activities:</h2>';
+
+      const list = document.createElement('ul');
+      suggestionsMap[goal].forEach(activity => {
+        const listItem = document.createElement('li');
+        listItem.textContent = activity;
+        listItem.style.margin = '10px 0';
+        listItem.style.fontSize = '18px';
+        list.appendChild(listItem);
+      });
+      suggestionsDiv.appendChild(list);
+    }
+
+    function showPanicSolution() {
+      document.getElementById("arrow").style.display = "block";
+      document.getElementById("panic-message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
