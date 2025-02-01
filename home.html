@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <style>
+*
+{
+	
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
 body 
 {
   margin: 0;
@@ -15,15 +22,14 @@ body
 }
 
 .intro-container {
-height:100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image:linear-gradient( #3498db,blue);
-  color: #fff;
-  
-  padding: 50px;
-  animation:move 2s linear infinite;
+	height:100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image:linear-gradient( #3498db,blue);
+	color: #fff;
+	padding: 50px;
+	animation:move 2s linear infinite;
 }
 .float-image {
 width:20%;
@@ -139,8 +145,22 @@ width:9%;
 .intro-image img {
   max-width: 100%;
   height: 100vh;
-  
+  animation:bounce 2s linear infinite ;
   border-radius: 10px;
+}
+@keyframes bounce
+{
+		0%, 100% 
+		{
+			opacity:0.9;
+			transform: translate(0%, 0%) translateY(0);
+		}
+		50% 
+		{
+
+			opacity:1;
+			transform: translate(0%, 0%) translateY(-20px);
+		}
 }
 
 .features-container {
@@ -157,227 +177,219 @@ width:9%;
 }
 
 /* Add more styles as needed */
- header {
-		 display: flex;
-      justify-content: space-between;
-      align-items: center;
-            background-color:#3498db;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-		.logo {
-      display: flex;
-      align-items: center;
-    }
+ header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    background-color:#3498db;
+    color: #fff;
+    padding: 10px;
+	text-align: center;
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+}
 
-    .logo img {
-      height: 40px; /* Adjust the height as needed */
-      margin-right: 10px;
-    }
+.logo img 
+{
+	height: 40px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
 
-    .profile {
-      display: flex;
-      align-items: center;
-    }
-
-    .profile img {
-      border-radius: 50%;
-      height: 35px; /* Adjust the height as needed */
-    }
-	.element ul
-	{
+.profile
+{
+    display: flex;
+    align-items: center;
+}
+.profile img 
+{
+    border-radius: 50%;
+    height: 35px; /* Adjust the height as needed */
+}
+.element ul
+{
 	list-style-type:none;
 	margin-left:-200px;
 	margin-top:-5px;
-	}
-	.element li
-	{
-		float:left;
-		padding:10px;
+}
+.element li
+{
+	float:left;
+	padding:10px;
 		
-		
-	}
-	.element li a
-	{
+}
+.element li a
+{
 	text-decoration:none;
 	color:#fff;
 	transition:0.75s;
-	}
-	.element li a:hover
-	{
+}
+.element li a:hover
+{
 	border-radius:8px;
-		border-bottom:5px solid blue;
-	}
-	
-	
-        .doctor-recommendations 
-        {
-		text-align:center;
-		height:140vh;
-            margin-top: 20px;
-            overflow-x: auto;
-			background-color:#ecf0f1;
-        }
-		.doctor-recommendations h2
-		{
-		font-size:30px;
-		opacity:0.8;
-		}
-
-        
-		
-		.container {
-		font-size:25px;
+	border-bottom:5px solid blue;
+}
+.doctor-recommendations 
+{
+	text-align:center;
+	height:150vh;
+    margin-top: 20px;
+    overflow-x: auto;
+	background-color:#ecf0f1;
+			
+}
+.doctor-recommendations h2
+{
+	font-size:30px;
+	opacity:0.8;
+}
+.container
+{
+	font-size:25px;
 	margin-top:2%;
-	 align-items:center;
-	
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding:20px;
-  margin-left:5%;
-  
+	align-items:center;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding:20px;
+	margin-left:5%;
 	padding-right:20px;
 	padding-left:20px;
 	padding-top:auto;
 	padding-bottom:auto;
 	box-sizing:border-box
-  
-  
 }
-		.column2 {
+.column2
+{
 	
-  flex: 1;
-  padding: 25px;
-  border-radius: 5px;
-
- 
-  box-sizing: content;
-  align-items:center;
-  text-align:center;
-  list-style-type:none;
-  
-
+	flex: 1;
+	padding: 25px;
+	border-radius: 5px;
+	box-sizing: content;
+	align-items:center;
+	text-align:center;
+	list-style-type:none;
 }
-
-.column2 h1 {
-  margin-top: 0;
+.column2 h1
+{
+	margin-top: 0;
 	margin-left:auto;
 }
-
-
-.column2 p {
-  margin-bottom: 0;
-  
-  font-family:"Poppins";
-  font-size:20px;
-  
+.column2 p 
+{
+	margin-bottom: 0;  
+	font-family:"Poppins";
+	font-size:20px;
 }
 
 
-.column2 a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-	  transition:1s;
-    }
-.column-container {
-      display: flex;
-      justify-content: space-around;
-      padding: 20px;
-    }
-
-.box {
-
-display:flex;
+.column2 a 
+{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+	transition:1s;
+}
+.column-container 
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+	margin-bottom:50px;
+	margin-top:-50px;
+}
+.box 
+{
+	  display:flex;
       width: 500px;
-	  height:200px;
+	  height:300px;
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
       margin: 10px;
-      padding: 15px;
+      padding: 30px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease-in-out;
-    }
-
-    .box:hover {
+}
+.box:hover 
+{
       transform: scale(1.05);
-    }
-
-    .box img {
+}
+.box img 
+{
       max-width: 100%;
       height:200px;
       border-radius: 4px;
       margin-bottom: 5px;
 	  margin-right:10px;
-    }
-
-    .box h2 {
-	display:flex;
+}
+.box h2 
+{
+	  display:flex;
       font-size: 18px;
       margin-bottom: 8px;
-    }
-
-    .box p {
+}
+.box p 
+{
 	
       font-size: 16px;
       color: #555;
-    }
-		
-		.box1 {
+}
+.box1 
+{
 
-display:flex;
-
+	  display:flex;
       width: 800px;
 	  height:300px;
       background-color:white ;
       border: 1px solid #ddd;
       border-radius: 8px;
-      margin-top:-15%;
-      padding: 5%;
+	  position:relative;
+      margin-top:-100px;
+      padding: 50px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease-in-out;
-    }
+}
 
-    .box1:hover {
+.box1:hover
+{
       transform: scale(1.05);
-    }
-
-    .box1 img {
+}
+.box1 img 
+{
       max-width: 100%;
       height:100%;
 	  padding-right:10px;
       border-radius: 5px;
       margin-bottom: 5px;
 	  margin-right:10px;
-    }
-
-    .box1 h2 {
-	display:flex;
+	  scale:1.2;
+}
+.box1 h2 
+{
+	  display:flex;
       font-size: 18px;
       margin-bottom: 8px;
-    }
-
-    .box1 p 
-	{
-	
-		margin-right:30px;
+}
+.box1 p 
+{	
+	  margin-right:30px;
       font-size: 19px;
       color: #555;
-    }
-		.khalcha
-		{
-			background-color:#3498db;
-		}
-		.main-footer
+}
+.khalcha
+{
+	background-color:#3498db;
+}
+.main-footer
 {
 	padding:90px 0;
 	display:flex;
 	justify-content:space-evenly;
-	background-image:linear-gradient(#3498db,blue)
-	
+	background-image:linear-gradient(#3498db,blue)	
 }
 .main-footer ul
 {
@@ -390,7 +402,6 @@ display:flex;
 	color:#ffffff;
 	margin-bottom:10px;
 	font-weight:500;
-	
 }
 .main-footer h2
 {
@@ -421,7 +432,6 @@ footer a
 	color:#6EB981;
 	font-size:17px;
 	margin-top:5px;
-	
 }
 .contact-details
 {
@@ -431,7 +441,6 @@ footer a
 {
 	list-style:none;
 	margin:10px 0;
-	
 }
 .contact-details li a
 {
@@ -442,7 +451,6 @@ footer a
 {
 	color:#f1f1f1;
 	margin-right:10px;
-	
 }
 .sociallogos
 {
@@ -470,7 +478,7 @@ footer a
 	<div class="element">
 	<ul>
       <li><a href="home.html">Home</a></li>
-	  <li><a href="#">About</a></li>
+	  <li><a href="about.html">About</a></li>
 	  <li><a href="breath.html">Exercises</a></li>
 	  <li><a href="#">Contact Us</a></li>
 	  </ul>
@@ -484,7 +492,8 @@ footer a
   <div class="intro-container">
     <div class="intro-content">
       <div class="intro-text">
-	  <img src="neuron.png" alt="Floating Image" class="float-image">
+	  <!--
+	  <img src="neuron.png" alt="Floating Image" class="float-image"> -->
       <img src="neuron.png" alt="Floating Image" class="float-image1">
        <img src="neuron.png" alt="Floating Image" class="float-image2">
       <img src="neuron.png" alt="Floating Image" class="float-image3">
@@ -500,7 +509,7 @@ footer a
       </div>
     </div>
     <div class="intro-image">
-      <img src="mh1.jpg" alt="Introduction Image">
+      <img src="1.png" alt="Introduction Image">
     </div>
   </div>
 
@@ -642,7 +651,7 @@ footer a
 <h1>@ Your Copyright 2024 All Rights Reserved</h1>
 </section>
   
-	</section>
+	</section>		
 	
   <!-- Add more sections as needed -->
 
