@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mental Health Support</title>
-  <link rel="stylesheet" href="styles.css">
+  
+  
+   
 </head>
 <style>
 *
@@ -235,8 +237,9 @@ width:9%;
 .doctor-recommendations 
 {
 	text-align:center;
-	height:150vh;
+	height:auto;
     margin-top: 20px;
+	padding-top:50px;
     overflow-x: auto;
 	background-color:#ecf0f1;
 			
@@ -250,12 +253,11 @@ width:9%;
 {
 	font-size:25px;
 	margin-top:2%;
-	align-items:center;
 	display: flex;
 	justify-content: space-around;
-	align-items: flex-start;
-	padding:20px;
-	margin-left:5%;
+	align-items: center;
+	
+	
 	padding-right:20px;
 	padding-left:20px;
 	padding-top:auto;
@@ -266,10 +268,10 @@ width:9%;
 {
 	
 	flex: 1;
-	padding: 25px;
+	padding:25px 70px;
 	border-radius: 5px;
 	box-sizing: content;
-	align-items:center;
+	
 	text-align:center;
 	list-style-type:none;
 }
@@ -297,6 +299,7 @@ width:9%;
 {
     display: flex;
     justify-content: space-around;
+	align-items:center;
     padding: 20px;
 	margin-bottom:50px;
 	margin-top:-50px;
@@ -304,8 +307,8 @@ width:9%;
 .box 
 {
 	  display:flex;
-      width: 500px;
-	  height:300px;
+      width: 550px;
+	  height:250px;
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -348,7 +351,7 @@ width:9%;
       border: 1px solid #ddd;
       border-radius: 8px;
 	  position:relative;
-      margin-top:-100px;
+      margin-top:-60px;
       padding: 50px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease-in-out;
@@ -379,6 +382,11 @@ width:9%;
 	  margin-right:30px;
       font-size: 19px;
       color: #555;
+}
+.main
+{
+	padding:50px;
+	margin-bottom:100px;
 }
 .khalcha
 {
@@ -466,6 +474,98 @@ footer a
 .com ul li
 {
 	padding:5px 0;
+}
+/* New CSS */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+	margin:100px 0px;
+}
+
+.card {
+margin:0px 100px;
+    background-color: #FEFCE8; /* bg-yellow-100 */
+    padding: 2rem;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: bold;
+    color: #4B5563; /* text-gray-800 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.description {
+    color: #4B5563; /* text-gray-700 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.divider {
+    border: 1px solid #D1D5DB; /* border-gray-300 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat {
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.stat-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+    color: #F97316; /* text-orange-500 */
+}
+
+.stat-description {
+    color: #4B5563; /* text-gray-700 */
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .image {
+        margin-bottom: 0; /* md:mb-0 */
+        margin-right: 2rem; /* md:ml-8 */
+    }
+
+    .content {
+        text-align: left;
+    }
+
+    .stats {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .stat {
+        margin-bottom: 0; /* md:mb-0 */
+    }
 }
 </style>
 <body>
@@ -587,16 +687,41 @@ footer a
       Stigma keeps people from addressing mental health issues. We work with governments, educational institutions, civil society and media to combat the bias and build support for mental health counselling and interventions.
     </div>
 	<br>
-
-	
-
-
-	
-	  
+ 
    </div>
    </div>
    </div>
    </section>
+   <main class="container">
+        <div class="card">
+            <img alt="Illustration of a person meditating" class="image" src="https://storage.googleapis.com/a1aa/image/foeklHbpx5DmsarJzxtilQjhPLYTbMU2uWcmJVZRVaw.jpg" />
+            <div class="content">
+                <h2 class="title">Prioritize your mental health</h2>
+                <p class="description">
+                    Take the first step. Call us to re-set, re-energize and re — build your life. Live your life by getting the much-needed support from our experts when needed
+                </p>
+                <hr class="divider"/>
+                <div class="stats">
+                    <div class="stat">
+                        <h3 class="stat-title">1 in 3</h3>
+                        <p class="stat-description">people who message or call us are anxious or suicidal</p>
+                    </div>
+                    <div class="stat">
+                        <h3 class="stat-title">10 lakh+</h3>
+                        <p class="stat-description">confidential conversations have been participated in</p>
+                    </div>
+                    <div class="stat">
+                        <h3 class="stat-title">300+</h3>
+                        <p class="stat-description">universities/colleges have sent us students/interns for training</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
    <section class="khalcha">
 		<div class="column2">
  <div class="column-container">
